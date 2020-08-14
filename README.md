@@ -15,6 +15,7 @@ Donate Direct is a web service that provides an API for vendors, who pledge thei
 ## Tools:
  - Google Cloud
  - PayPal API
+ - Flask Web framework
  
 ## Stretch Goals:
  - User choice for percentage of proceeds donated
