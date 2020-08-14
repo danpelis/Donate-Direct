@@ -20,10 +20,12 @@
   <body
     style="
       background-image: url(https://tribeza.com/wp-content/uploads/2020/06/date-yyyymmdd_133257-3.jpg);
-      opacity: 0.8;
     "
   >
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav
+      class="navbar navbar-expand-md navbar-light bg-light"
+      style="opacity: 0.8;"
+    >
       <a class="navbar-brand" href="{{ url_for('home')}}">Donate Direct</a>
       <button
         class="navbar-toggler"
@@ -38,14 +40,43 @@
       </button>
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Register</a>
+          <li class="nav-item">
+            <a class="nav-link text-info" href="#">Register</a>
           </li>
         </ul>
       </div>
     </nav>
     <div class="container">
       {% block content %} {% endblock %}
+    </div>
+
+    <div
+      class="mx-auto bg-info"
+      style="width: 90%; margin-top: 5%; opacity: 0.9;"
+    >
+      <h1
+        class="text-light font-weight-bold text-center"
+        style="padding-top: 4%;"
+      >
+        About Donate Direct
+      </h1>
+      <p
+        class="text-light"
+        style="
+          font-size: 22px;
+          margin-left: 4%;
+          margin-right: 4%;
+          padding-bottom: 5%;
+        "
+      >
+        Donate Direct is a web service that provides an API for vendors, who
+        pledge their proceeds to charity, to prove they reliability to their
+        customers. It aims to remove the ambiguity of the trustworthiness of
+        these third-party donation collectors, such as Instagram fundraisers and
+        vendors who pledge their process to charities. Hopefully the guarantee
+        that their money is being donated, will motivate more people to donate
+        to worthy causes, such as the BLM movement.
+      </p>
     </div>
   </body>
 </html>
