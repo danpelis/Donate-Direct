@@ -20,6 +20,18 @@ Donate Direct is a web service that provides an API for vendors, who pledge thei
  - User choice for percentage of proceeds donated
 
 
+### Usage
+
+To run the application locally navigate to the root directory and run:
+```
+python main.py
+```
+
+To refresh the google cloud instance of the web service run:
+```
+gcloud app deploy
+```
+
 ---
 ### Duckhacks for Social Good
 Team: Dan Pelis, Jessica Valenzuela
