@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>Flask app</title>
+    <title>Donate Direct</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -20,10 +20,13 @@
   <body
     style="
       background-image: url(https://tribeza.com/wp-content/uploads/2020/06/date-yyyymmdd_133257-3.jpg);
-      opacity: 0.8;
+      padding-bottom: 4%;
     "
   >
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav
+      class="navbar navbar-expand-md navbar-light bg-light"
+      style="opacity: 0.8;"
+    >
       <a class="navbar-brand" href="{{ url_for('home')}}">Donate Direct</a>
       <button
         class="navbar-toggler"
@@ -38,8 +41,8 @@
       </button>
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Register</a>
+          <li class="nav-item">
+            <a class="nav-link text-info" href="#register">Register</a>
           </li>
         </ul>
       </div>
@@ -47,5 +50,102 @@
     <div class="container">
       {% block content %} {% endblock %}
     </div>
+
+    <div
+      class="mx-auto bg-info"
+      style="width: 90%; margin-top: 5%; opacity: 0.9;"
+    >
+      <h1
+        class="text-light font-weight-bold text-center"
+        style="padding-top: 4%;"
+      >
+        About Donate Direct
+      </h1>
+      <p
+        class="text-light"
+        style="
+          font-size: 22px;
+          margin-left: 4%;
+          margin-right: 4%;
+          padding-bottom: 5%;
+        "
+      >
+        Donate Direct is a web service that provides an API for vendors, who
+        pledge their proceeds to charity, to prove they reliability to their
+        customers. It aims to remove the ambiguity of the trustworthiness of
+        these third-party donation collectors, such as Instagram fundraisers and
+        vendors who pledge their process to charities. Hopefully the guarantee
+        that their money is being donated, will motivate more people to donate
+        to worthy causes, such as the BLM movement.
+      </p>
+    </div>
+    <div
+      class="mx-auto bg-info"
+      style="width: 90%; margin-top: 5%; opacity: 0.9;"
+    >
+      <form
+        class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2"
+      >
+        <h1
+          class="text-light font-weight-bold text-center"
+          style="padding-top: 4%; font-size: 30px;"
+        >
+          Search for a verified Donate Direct user.
+        </h1>
+
+        <input
+          class="form-control form-control-sm mr-3 w-75"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+          style="margin: 4%;"
+        />
+        <button type="submit" class="btn btn-primary">Search</button>
+
+      </form>
+    </div>
+    <div
+      id = "register"
+      class="mx-auto bg-info"
+      style="width: 90%; margin-top: 5%; opacity: 0.9; padding-bottom: 3%;"
+    >
+      <h1
+        class="text-light font-weight-bold text-center"
+        style="padding-top: 4%; font-size: 30px;"
+      >
+        Register your PayPal account.
+        <form>
+          <div class="form-group text-left" style="margin-left: 15%; margin-right: 15%; font-size: 20px;">
+            <label for="business">Business Name </label>
+            <input type="text" class="form-control" id="username" placeholder="Business Name" />
+          </div>
+          <div class="form-group text-left" style = "margin-left: 15%; margin-right: 15%; font-size: 20px;">
+            <label for="username" >Paypal Username: </label>
+            <input
+              type="username"
+              class="form-control"
+              id="username"
+              placeholder="Paypal Username"
+            />
+          </div>
+          <div class="form-group text-left" style="margin-left: 15%; margin-right: 15%; font-size: 20px;">
+            <label for="password">Password: </label>
+            <input type="text" class="form-control" id="password" placeholder="Password" />
+          </div>
+   
+          <div class="form-group text-left" style="margin-left: 15%; margin-right: 15%; font-size: 20px;">
+              <label for="charity">Charity Name: </label>
+      <select class="form-control">
+        <option>NAACP Legal Defense and Educational Fund, Inc. </option>
+         <option>Color Of Change</option>
+        <option>The Movement for Black Lives </option>
+      </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </h1>
+    </div>
+              </div>
+
   </body>
 </html>

@@ -11,6 +11,7 @@ load_dotenv(dotenv_path)
 
 GOOGLE_APPLICATION_CREDENTIALS =  os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 
+# Initialize Flask app
 app = Flask(__name__)
 
 # Initialize Firestore DB
