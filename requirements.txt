@@ -1,3 +1,6 @@
 flask
 paypalrestsdk
 firebase_admin
+sqlalchemy
+pymysql
+python-dotenv
