@@ -1,5 +1,7 @@
-from flask import Flask, render_template      
+#imports
+from flask import Flask, render_template, request, jsonify
 
+# Initialize Flask app
 app = Flask(__name__)
 
 @app.route("/")
