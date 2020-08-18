@@ -1,2 +1,7 @@
 flask
-firebase_admin
+Flask-PyMongo
+mongoengine
+pymongo
+flask_wtf
+wtforms 
+dnspython

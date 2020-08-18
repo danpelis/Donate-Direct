@@ -13,7 +13,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>{% block title %} {% endblock %}</title>
   </head>
 
@@ -79,31 +79,37 @@
         to worthy causes, such as the BLM movement.
       </p>
     </div>
-    <div
-      class="mx-auto bg-info"
-      style="width: 90%; margin-top: 5%; opacity: 0.9;"
-    >
-      <form
-        class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2"
-      >
-        <h1
-          class="text-light font-weight-bold text-center"
-          style="padding-top: 4%; font-size: 30px;"
-        >
+    <div id = "search" class="mx-auto bg-info" style="width: 90%; margin-top: 5%; opacity: 0.9;">
+      <form id="validate-form" class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
+        
+        <h1 class="text-light font-weight-bold text-center" style="padding-top: 4%; font-size: 30px;">
           Search for a verified Donate Direct user.
         </h1>
 
-        <input
-          class="form-control form-control-sm mr-3 w-75"
-          type="text"
-          placeholder="Search"
-          aria-label="Search"
-          style="margin: 4%;"
-        />
+        <input class="form-control form-control-sm mr-3 w-75" name="name" type="text" placeholder="Search" aria-label="Search" style="margin: 4%;"/>
         <button type="submit" class="btn btn-primary">Search</button>
-
       </form>
+              <!-- <ul>
+                <li><a href = "#search" class = "{{ a2 }}">Business</a></li>
+              </ul> -->
+      <div id="result"></div>
     </div>
+    <script>
+      $('#validate-form').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "validate",
+            type: "POST",
+            data: $('#validate-form').serialize(),
+            success: function(response){
+              console.log(response);
+              $("#result").empty()
+              $("#result").append('<div class="text-light" style="text-align: center; font-size: 35px; font-weight: bold;">' + 'Business Name: ' + '<span style="color: blue;"> ' + response.result.name + ' </span>' + '</div>');
+              $("#result").append('<div class="text-light" style="text-align: center; font-size: 25px; padding-bottom: 40px; font-weight: bold;">' + "Charity Name: " +  '<span style="color: blue;"> ' + response.result.charity + ' </span>' + '</div>');
+            }
+        });
+      });
+   </script>
     <div
       id = "register"
       class="mx-auto bg-info"
