@@ -1,5 +1,5 @@
 # Donate-Direct
-Donate Direct is a web service that provides an API for vendors, who pledge their proceeds to charity, to prove they reliability to their customers. It aims to remove the ambiguity of the trustworthiness of these third-party donation collectors, such as Instagram fundraisers and vendors who pledge their process to charities. Hopefully the guarantee that their money is being donated, will motivate more people to donate to worthy causes, such as the BLM movement.
+Donate Direct is a web service built for vendors, who pledge their proceeds to charity, to prove they reliability to their customers. It aims to remove the ambiguity of the trustworthiness of these third-party donation collectors, such as Instagram fundraisers and vendors who pledge their process to charities. Hopefully the guarantee that their money is being donated, will motivate more people to donate to worthy causes, such as the BLM movement.
 
 
 ## Objectives:
