@@ -1,12 +1,7 @@
 flask
-<<<<<<< Updated upstream
-paypalrestsdk
-firebase_admin
-sqlalchemy
-pymysql
-python-dotenv
-=======
 Flask-PyMongo
-bson
+mongoengine
 pymongo
->>>>>>> Stashed changes
+flask_wtf
+wtforms 
+dnspython
